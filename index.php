@@ -5,7 +5,7 @@ include("templates/header.php");
 ?>
 
     <h1> Home </h1>
-    <br>
+
     <div class="row">
 
     <div class="col-lg-4 col-md-6">
@@ -14,14 +14,14 @@ include("templates/header.php");
                 <div class="card-body">
                 <h5 class="card-title"> titre </h5>
                 <p class="card-text"> resume </p>
-                <a href="./single.php" class="btn btn-primary" target="_blank">Article</a>
+                <button class="btn btn-primary" target="_blank">Article</button>
             </div>
         </div>
     </div>
 
 </div>
  
-    <br>
+
     <a href="./contact.php" target="_blank">Contact</a>
 
 <?php
