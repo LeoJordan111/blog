@@ -1,8 +1,9 @@
 
 <?php
-include_once("header.php");
+include("templates/header.php");
 ?>
 
+<h1>Single article</h1>
 <div class="row">
     <div class="col-lg-4 col-md-6">
         <div class="card">
@@ -18,5 +19,5 @@ include_once("header.php");
 <a href="./index.php" target="_blank">Retour page d'acceuil</a>
 
 <?php
-include_once("footer.php");
+include("templates/footer.php");
 ?>

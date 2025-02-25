@@ -1,12 +1,21 @@
 
-
 <?php
 include("templates/header.php");
 ?>
 
-    <h1> Home </h1>
-    <br>
-    <div class="row">
+<h1>Archive</h1>
+
+<?php
+    $article = getArticles();
+    // pour chaque article --> for each
+    
+?>
+
+<!-- Faire une boucle sur toutes les card (1 card = 1 article) -->
+
+
+
+<div class="row">
 
     <div class="col-lg-4 col-md-6">
         <div class="card">
@@ -20,9 +29,7 @@ include("templates/header.php");
     </div>
 
 </div>
- 
-    <br>
-    <a href="./contact.php" target="_blank">Contact</a>
+
 
 <?php
 include("templates/footer.php");
