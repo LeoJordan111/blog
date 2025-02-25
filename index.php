@@ -1,28 +1,26 @@
-
-
 <?php
 include("templates/header.php");
 ?>
 
-    <h1> Home </h1>
+<h1> Home </h1>
 
-    <div class="row">
+<?php
+include("templates/slide.php");
+?>
 
-    <div class="col-lg-4 col-md-6">
-        <div class="card">
-            <!-- <img src= "./assets/images/"> -->
-                <div class="card-body">
-                <h5 class="card-title"> titre </h5>
-                <p class="card-text"> resume </p>
-                <button class="btn btn-primary" target="_blank">Article</button>
+<div class="row">
+    <?php
+    $content = "Résumé";
+    for ($i = 1; $i < 7; $i++): ?>
+        <div class="col-lg-4 col-md-6" style="margin-bottom:10px">
+            <div class="card">
+                <?php include("templates/card.php"); ?>
             </div>
         </div>
-    </div>
-
+    <?php endfor; ?>
 </div>
- 
 
-    <a href="./contact.php" target="_blank">Contact</a>
+<a href="./contact.php" target="_blank">Contact</a>
 
 <?php
 include("templates/footer.php");

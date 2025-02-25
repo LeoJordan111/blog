@@ -16,8 +16,10 @@ include("templates/header.php");
     </div>
 </div>
 
-<a href="./index.php" target="_blank">Retour page d'acceuil</a>
+<!-- <a href="./index.php" target="_blank">Retour page d'acceuil</a> -->
 
 <?php
-include("templates/footer.php");
+    $text = "commentaire";
+    include("templates/form.php");
+    include("templates/footer.php");
 ?>
