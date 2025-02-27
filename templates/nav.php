@@ -11,6 +11,9 @@
           <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/archive.php" target="_blank">Archive</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/article-create.php" target="_blank">Ajouter un article</a>
         </li>
         <!-- <li class="nav-item">

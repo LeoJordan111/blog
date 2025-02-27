@@ -1,6 +1,6 @@
 <?php
 require_once("db/article-db.php");
-$articles = getArticles();
+$articles = get2Articles();
 include("templates/header.php");
 ?>
 
