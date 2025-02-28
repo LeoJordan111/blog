@@ -5,10 +5,17 @@ $id = $_GET['key'];
 $articles = getArticleById($id);
 $comments = getComments($id);
 
+if (isset($_POST['author']) && isset($_POST['content']) && isset($_POST['article_id'])) {
+    $author = $_POST['author'];
+    $content = $_POST['content'];
+    $articleId = $_POST['article_id'];
+    createComments($content, $author, $id);
+}
+
 include("templates/header.php");
 ?>
 <br><br>
-<h1>Single article</h1>
+<h1>Article</h1>
 <br><br>
 <div class="row">
     <div class="col-lg-4 col-md-6" style="margin-bottom:10px">
@@ -26,14 +33,13 @@ include("templates/header.php");
     <p>Commentaires</p>
         <?php
         foreach ($comments as $key => $comment): ?>
-        <p><?php echo $comment['author']; ?> : <?php echo $comment['content']; ?></p>
+        <p><?php echo $comment['author']; ?> : <?php echo $comment['content']; ?> Poster le : <?php echo $comment['created_at']; ?></p>
         <?php endforeach; ?>
     <p></p>
 <br><br>
 <a href="./contact.php" target="_blank">Contact</a>
 <br><br>
 <?php
-$text = "commentaire";
 include("templates/form.php");
 include("templates/footer.php");
 ?>

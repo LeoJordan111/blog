@@ -1,13 +1,13 @@
 <?php
 require_once("db/article-db.php");
-$articles = get2Articles();
+$articles = get3Articles();
 include("templates/header.php");
 ?>
 
 <h1> Home </h1>
 
 <?php
-include("templates/slide.php");
+// include("templates/slide.php");
 ?>
 
 <div class="row">

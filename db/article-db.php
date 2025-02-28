@@ -22,9 +22,9 @@ function getArticleById(int $id) {
     return $stmt->fetch();
 }
 
-function get2Articles() {
+function get3Articles() {
     global $pdo; // toujours présent
-    $sql = 'SELECT a.*, c.label FROM article as a JOIN category as c ON a.category_id = c.id ORDER BY a.id DESC LIMIT 2';
+    $sql = 'SELECT a.*, c.label FROM article as a JOIN category as c ON a.category_id = c.id ORDER BY a.id DESC LIMIT 3';
     // $sql = 'SELECT * FROM article';
     $stmt = $pdo->prepare($sql); // toujours présent
     $stmt->execute();
@@ -48,5 +48,17 @@ function getArticlesByCategory() {
     $sql = 'SELECT * FROM article';
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
+}
+
+// Fonction pour créer un article avec 3 paramètres (les 3 variables)
+function createArticle($title, $content, $categoryid) { // mettre : bool avant { pour que la fonction retroune un boolean
+    global $pdo; // toujours présent
+    $sql = "INSERT INTO `article`(`title`, `content`, `category_id`) VALUES (:title, :content, :categoryid)";
+    $stmt = $pdo->prepare($sql); // toujours présent
+    $stmt->execute([
+        ':title' => $title,
+        ':content' => $content,
+        ':categoryid' => $categoryid
+    ]);
 }
     ?>
